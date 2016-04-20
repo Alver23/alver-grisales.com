@@ -1,3 +1,4 @@
+- var lenguages = [{ name: "PHP", level: 80}, { name: "Javascript", level: 70}]
 div#info
 	div.photo
 		img(src = "images/content/photo_green.jpg" height="280" width="280")
@@ -38,4 +39,11 @@ div.content-inner
 	div.content
 		div.body
 			p Sed sed leo sit amet elit sagittis fermentum. Nulla posuere commodo erat. Nam ac nunc ipsum, id espara tincidunt orci. Quisque adipiscing molestie dolor, ut congue sem porta et. Sed sapien urna, auctor et accumsan ut, accumsan sit amet dui.
+		div#my-skills.block
+			div.block-content
+				each lenguage in lenguages
+					div.roll-field
+						div.label lenguage.name
+						div.progressbar
+							span.progress-count(level=lenguage.level)
 
