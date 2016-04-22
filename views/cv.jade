@@ -1,0 +1,24 @@
+.content-inner
+	div(class="left-sidebar page")
+		#programming.block
+			h2 Programming
+			.block-content
+				each value, key in lenguages
+					div(class="field roll-with-description hide")
+						.roll-button
+							span
+						div.roll-field
+							div.label= value.name
+							div.progressbar
+								span.progress-count(level=value.level)
+							.description= value.description
+				.clear
+		#office-apps.block
+			h2 Office Applications
+			.block-content
+				each value, key in officeApplication
+					.roll-field
+						div.label= value.name
+						div.progressbar
+							span.progress-count(level=value.level)
+				

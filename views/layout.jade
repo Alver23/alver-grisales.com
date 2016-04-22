@@ -10,14 +10,22 @@ html(lang="en")
 		link(rel="stylesheet" type="text/css" href="css/color-blue.css")
 		link(rel="stylesheet" type="text/css" href="css/style.css")
 	body
-		div#wrapper.wrapper
+		#wrapper.wrapper
 			ul#navigation-menu.navigation-menu
 				li.first
 					a.profile(href="#profile")
 						span Profile
-			div#container
-				div#profile
+				li
+					a.cv(href="#cv")
+						span CV
+			#container
+				#profile
 					include ./profile.jade
+				#cv
+					include ./cv.jade
+			#footer
+				#copyright © 2013 All Rights Reserved. Design by www.alver-grisales.com
+		block content
 		script(type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false")
 		script(type="text/javascript" src="js/jquery.min.js")
 		script(type="text/javascript" src="js/jquery.easytabs.min.js")
@@ -27,4 +35,3 @@ html(lang="en")
 		script(type="text/javascript" src="js/jquery.gmap.min.js")
 		script(type="text/javascript" src="js/response.min.js")
 		script(type="text/javascript" src="js/custom.js")
-	block content
